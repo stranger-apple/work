@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  .box
+{
+	width:500px;
+	height:20px;
+  position: relative;display: flex;
+ margin:0 auto; top:500px;
+ border:red 2px solid;
+}
+.dot1{width:20px;height:20px;border-radius:25px;background: white;margin-left:15px;animation: dot1 2s;animation-fill-mode:forwards;}
+.dot2{width:20px;height:20px;border-radius:25px;background:white;margin-left:15px;animation:dot2 2s;animation-delay: 2s;animation-fill-mode:forwards;}
+.dot3{width:20px;height:20px;border-radius:25px;background: white;margin-left:15px;animation:dot3 2s;animation-delay: 4s;animation-fill-mode:forwards;}
+.dot4{width:20px;height:20px;border-radius:25px;background: white;margin-left:15px;animation:dot4 2s;animation-delay: 6s;animation-fill-mode:forwards;}
+.dot5{width:20px;height:20px;border-radius:25px;background: white;margin-left:15px;animation:dot5 2s;animation-delay: 8s;animation-fill-mode:forwards;}
+.dot6{width:20px;height:20px;border-radius:25px;background: white;margin-left:15px;animation:dot6 2s;animation-delay: 10s;animation-fill-mode:forwards;}
+.dot7{width:20px;height:20px;border-radius:25px;background: white;margin-left:15px;animation:dot7 2s;animation-delay: 12s;animation-fill-mode:forwards;}
+.dot8{width:20px;height:20px;border-radius:25px;background: white;margin-left:15px;animation:dot8 2s;animation-delay: 14s;animation-fill-mode:forwards;}
+.dot9{width:20px;height:20px;border-radius:25px;background: white;margin-left:15px;animation:dot9 2s;animation-delay: 16s;animation-fill-mode:forwards;}
+.dot10{width:20px;height:20px;border-radius:25px;background: white;margin-left:15px;animation:dot10 2s;animation-delay: 18s;animation-fill-mode:forwards;}
+.dot11{width:20px;height:20px;border-radius:25px;background: white;margin-left:15px;animation:dot11 2s;animation-delay: 20s;animation-fill-mode:forwards;}
+#dot12{width:20px;height:20px;border-radius:25px;background: white;margin-left:15px;animation:dot12 2s;animation-delay: 22s;animation-fill-mode:forwards;}
+@keyframes dot1{
+0%   {background: red;}
+25%  {background: yellow;}
+50%  {background: blue;}
+100% {background: green;}
+}
+@keyframes dot2{
+0%   {background: red;}
+25%  {background: yellow;}
+50%  {background: blue;}
+100% {background: green;}
+}
+@keyframes dot3{
+0%   {background: red;}
+25%  {background: yellow;}
+50%  {background: blue;}
+100% {background: green;}
+}
+@keyframes dot4{
+0%   {background: red;}
+25%  {background: yellow;}
+50%  {background: blue;}
+100% {background: green;}
+}
+@keyframes dot5{
+0%   {background: red;}
+25%  {background: yellow;}
+50%  {background: blue;}
+100% {background: green;}
+}
+@keyframes dot6{
+0%   {background: red;}
+25%  {background: yellow;}
+50%  {background: blue;}
+100% {background: green;}
+}
+@keyframes dot7{
+0%   {background: red;}
+25%  {background: yellow;}
+50%  {background: blue;}
+100% {background: green;}
+}
+@keyframes dot8{
+0%   {background: red;}
+25%  {background: yellow;}
+50%  {background: blue;}
+100% {background: green;}
+}
+@keyframes dot9{
+0%   {background: red;}
+25%  {background: yellow;}
+50%  {background: blue;}
+100% {background: green;}
+}
+@keyframes dot10{
+0%   {background: red;}
+25%  {background: yellow;}
+50%  {background: blue;}
+100% {background: green;}
+}
+@keyframes dot11{
+0%   {background: red;}
+25%  {background: yellow;}
+50%  {background: blue;}
+100% {background: green;}
+}
+@keyframes dot12{
+0%   {background: red;}
+25%  {background: yellow;}
+50%  {background: blue;}
+100% {background: green;}
+}
+#load{position:relative;}
+#finish{position: absolute;	width:500px;	height:20px;
+background: white ;z-index:100; 
+text-align: center;line-height: 20px;display: none;}
+
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class='dot1'></div>
+    <div class='dot2'></div>
+    <div class='dot3'></div>
+    <div class='dot4'></div>
+    <div class='dot5'></div>
+    <div class='dot6'></div>
+    <div class='dot7'></div>
+    <div class='dot8'></div>
+    <div class="dot9"></div>
+    <div class="dot10"></div>
+    <div class="dot11"></div>
+    <div id="dot12"></div>
+    <div id="load" style="margin-left:25px">100%</div>
+    <div id="finish" >加载完成</div>
+  </div>
+  <script>
+  var i=0;
+  function load(){i++
+    document.getElementById("load").innerHTML=i+"%";
+    if(i<100) setTimeout("load()",240);
+    else document.getElementById("finish").style.display="block";
+  }
+  setTimeout("load()",240)
+ 
+  </script>
+</body>
+</html>
