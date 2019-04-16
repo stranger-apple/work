@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style>
+        * {
+              margin:0;
+            padding:0;
+        }
+        #wrap {
+              position:relative;
+              width:1280px;
+              height:203px;
+               overflow:hidden;
+        }
+
+        #slider {
+              overflow: hidden;
+              text-align:center;
+              margin-left:0;
+              animation:slider 7.5s linear infinite ;}
+        ul {
+              list-style:none;
+        }
+
+        #slider li {
+              float:left;
+              width:1280px;
+              height:100%;
+        }
+        #slider img{
+             width:1280px;
+             height:100%;
+        }
+       @keyframes slider{
+         0%{margin-left:0px;}
+        33%{margin-left:0px;}
+        34%{margin-left:-1280px;}
+        66%{margin-left:-1280px;}
+        67%{margin-left:-2560px;}
+        100%{margin-left:-2560px;}
+       }
+       #dot{position:absolute;top:230px;left:580px;}
+       #dot li{width:20px;height: 20px;border-radius: 50px;background:grey;float:left;margin-left:4px;}
+       #dot1{animation: dot1 7.5s infinite;}
+       #dot2{animation: dot2 7.5s infinite;}
+       #dot3{animation: dot3 7.5s infinite;}
+       @keyframes dot1{
+         0%{background:black;}
+         33%{background:black;}
+         34%{background:grey;}
+         100%{background:grey;}
+       }
+       @keyframes dot2{
+         0%{background:grey;}
+         33%{background:grey;}
+         34%{background: black}
+         66%{background:black}
+         67%{background:grey;}
+         100%{background:grey;}
+       }
+       @keyframes dot3{
+        0%{background:grey;}
+         66%{background:grey;}
+         67%{background:black;}
+         100%{background:black;}
+       }
+</style>
+    </head>
+    <body>
+            <div id="wrap">
+               <ul id="slider">
+                <li><img src="banner2.png"></li>
+                <li><img src="banner1.png"></li>
+                <li><img src="banner3.png"></li>
+              </ul>
+            </div>  
+       <div>
+         <ul id="dot">
+            <li id="dot1"></li>
+            <li id="dot2"></li>
+            <li id="dot3"></li>
+         </ul>
+       </div>
+    </body>
+</html>
