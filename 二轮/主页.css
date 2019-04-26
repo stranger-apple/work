@@ -1,0 +1,54 @@
+*{margin: 0px;padding:0px;}
+.containe{width:100%;height:864px;background-image:url(主页.png) ;
+background-size:100% 100%;}
+#login{margin-left:1192px;margin-top:44px;float:left;}
+.logo{margin-top:182px;margin-left:501px;height:172px;width:293px; float:left;}
+.containe p{font-family: "Microsoft YaHei";float:left;margin-left:526px;margin-top:3px;}
+form input{height:41px;width:391px;float:left;margin-top:32px;margin-left:445px;border-radius: 20.5px;
+outline:none;position:relative;}
+input::placeholder{font-family: "Microsoft YaHei";font-size: large;text-indent: 33px;font-weight: bold;
+color:#4d4f55;}
+form img{position: absolute;top:513px;left:801px;}
+ul{margin-left:495px;position:absolute;top:563px;right:520px;display:flex;}
+ul li{margin-right:2px;width:69px;height:24px;border-radius:12px;list-style: none;border:2px #8d9190 solid;
+color:#4b4c4d;text-align: center;line-height: 24px;}
+ul a{text-decoration: none;}
+#loginbox{width:659px;height: 451px;position:absolute;top:181px;left:311px;display:none;
+    border:solid #5b5857;z-index: 99;background-color:rgba(255, 255, 255, 0.87);}
+    #loginbox p{display:felx;position:absolute;left:128px;line-height:40px;}
+    .count{position: absolute;top:192px;left:126px;}
+    .password{position:absolute;top:257px;left:126px;}
+    #name{position:absolute;top:155px;left:-229px;}
+    #password{position:absolute;top:226px;left:-229px;}
+    .submit{position:absolute;bottom:51px;left:259px;background-color: #eef3f5;
+    width:102px;height:41px;border-radius:20.5px;}
+    #password,#name{width:286px;height: 41px;border-radius: 20.5px;}
+    .sign{position:absolute;right:142px;bottom:54px;font-family: "Microsoft YaHei";text-decoration: underline;
+    font-family: "Microsoft YaHei";font-size: small; }
+  #loading{width:100%;height:864px;background-color:rgba(217,215,215,0.9);z-index:200;
+position: absolute;top:0px;display:flex;display:none;}
+.dot1,.dot2,.dot3{width:23px;height: 23px;border-radius:11.5px; background:#edf0f3;margin-right:53px;margin-top:36%;}
+.dot1{margin-left:45%;}
+.dot1{animation: dot1 1.5s infinite;}
+.dot2{animation: dot2 1.5s infinite;}
+.dot3{animation: dot3 1.5s infinite;}
+       @keyframes dot1{
+         0%{background:#535253;}
+         33%{background:#535253;}
+         34%{background:#edf0f3;}
+         100%{background:#edf0f3;}
+       }
+       @keyframes dot2{
+         0%{background:#edf0f3;}
+         33%{background:#edf0f3;}
+         34%{background: #535253}
+         66%{background:#535253}
+         67%{background:#edf0f3;}
+         100%{background:#edf0f3;}
+       }
+       @keyframes dot3{
+        0%{background:#edf0f3;}
+         66%{background:#edf0f3;}
+         67%{background:#535253;}
+         100%{background:#535253;}
+       }

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>分类页</title>
+<link href="详情页.css" type="text/css" rel="stylesheet" >
+</head>
+<body>
+<div class="head">
+    <img class="logo" src="推书_0002s_0000s_0001_small-logo.png.png">
+    <form method="POST" action="save.php">
+        <input type="text" placeholder="请搜索"id="search">
+    </form>
+    <div><img class="img" src="search1.png"></div>
+</div>
+<!--轮播图-->
+<div class="container">
+        <div class="wrap" style="left: -1280px;">
+                <img src="banner3.png">
+                <img src="banner1.png">
+                <img src="banner2.png">
+                <img src="banner3.png">
+                <img src="banner1.png">
+        </div>
+        <div class="buttons">
+            <span class="on"></span>
+            <span></span>
+            <span></span>
+        </div>
+        <a class="arrow arrow_left"><</a>
+        <a  class="arrow arrow_right">></a>
+    </div>
+    <div class="ground">
+        <div class="whiteground">
+            <div class="close"><a href="分类页.html" targer="_self"><img src="关闭.png"></a></div>
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="bookcover"><img src="bookcover.png"></div>
+            <div id="bookname">书名</div>
+            <div class="author"><img src="作者-.png">&nbsp;|</div>
+            <div id="author">作者</div>
+            <div class="publish"><img src="出.png">&nbsp;|</div>
+            <div id="publish">出版社</div>
+            <div class="publishtime"><img src="时间.png">&nbsp;|</div>
+            <div id="publishtime">出版时间</div>
+            <div class="library"><img src="图书馆.png">&nbsp;|图书馆藏书：</div>
+            <div id="library">x本</div>
+            <div id="where">x楼x架xx</div>
+            <div class="book"><img src="书-(1).png">&nbsp;|</div>
+            <div class="ban"><img src="豆瓣-.png"></div>
+            <div class="zhihu"><img src="知乎.png"></div>
+            <div class="shop"><img src="购买.png">&nbsp;|</div>
+            <div class="jingdong"><img src="京东.png"></div>
+            <div class="dangdang"><img src="当当.png"></div>
+            <div class="amazon"><img src="亚马逊.png"></div>
+            <div class="authorbreif">
+                <h>作者简介</h>
+                <p style="font-size:xx-small;text-indent:3em;">作者很帅很厉害。作者很帅很厉害。作者很帅很厉害。作者很帅很厉害。作者很帅很厉害。
+                    作者很帅很厉害。作者很帅很厉害。作者很帅很厉害。作者很帅很厉害。作者很帅很厉害。作者很帅很厉害。</p>
+            </div>
+            <div class="bookbreif">
+                <h>书籍简介</h>
+                <p style="font-size:12.4px;text-indent:3em;">这本书很好看，真的。这本书很好看，真的。这本书很好看，真的。这本书很好看，真的。这本书很好看，真的。
+                    这本书很好看，真的。这本书很好看，真的。这本书很好看，真的。这本书很好看，真的。这本书很好看，真的。
+                </p>
+            </div>
+            <div class="line4"></div>
+            <div class="line3"></div>
+            </div>
+            </div>
+            <script>
+document.getElementById("search").onfocus=function(){
+    if (search.placeholder=="请搜索") {
+        search.placeholder="";
+    }}
+    /*轮播图*/ 
+        var wrap = document.querySelector(".wrap");
+        var next = document.querySelector(".arrow_right");
+        var prev = document.querySelector(".arrow_left");
+        next.onclick = function () {
+            next_pic();
+        }
+        prev.onclick = function () {
+            prev_pic();
+        }
+        function next_pic () {
+            index++;
+            if(index > 2){
+                index = 0;
+            }
+            showCurrentDot();
+            var newLeft;
+            if(wrap.style.left === "-5120px"){
+                newLeft = -2560;
+            }else{
+                newLeft = parseInt(wrap.style.left)-1280;
+            }
+            wrap.style.left = newLeft + "px";
+        }
+        function prev_pic () {
+            index--;
+            if(index < 0){
+                index = 2;
+            }
+            showCurrentDot();
+            var newLeft;
+            if(wrap.style.left === "0px"){
+                newLeft = -2560;
+            }else{
+                newLeft = parseInt(wrap.style.left)+1280;
+            }
+            wrap.style.left = newLeft + "px";
+        }
+        var timer = null;
+        function autoPlay () {
+            timer = setInterval(function () {
+                next_pic();
+            },2500);
+        }
+        autoPlay();
+
+        var container = document.querySelector(".container");
+        container.onmouseenter = function () {
+            clearInterval(timer);
+        }
+        container.onmouseleave = function () {
+            autoPlay();    
+        }
+
+        var index = 0;
+        var dots = document.getElementsByTagName("span");
+        function showCurrentDot () {
+            for(var i = 0, len = dots.length; i < len; i++){
+                dots[i].className = "";
+            }
+            dots[index].className = "on";
+        }
+
+        for (var i = 0, len = dots.length; i < len; i++){
+            (function(i){
+                dots[i].onclick = function () {
+                    var dis = index - i;
+                    if(index == 2&& parseInt(wrap.style.left)!==-3840){
+                        dis = dis - 3;     
+                    }
+                    if(index == 0 && parseInt(wrap.style.left)!== -1280){
+                        dis = 3 + dis;
+                    }
+                    wrap.style.left = (parseInt(wrap.style.left) +  dis * 1280)+"px";
+                    index = i;
+                    showCurrentDot();
+                }
+            })(i);            
+        }
+</script>
+</body>
+</html>

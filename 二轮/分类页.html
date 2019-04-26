@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>分类页</title>
+<link href="分类页.css" type="text/css" rel="stylesheet" >
+</head>
+<body>
+<div class="head">
+    <img class="logo" src="推书_0002s_0000s_0001_small-logo.png.png">
+    <form method="POST" action="save.php">
+        <input type="text" placeholder="请搜索"id="search">
+    </form>
+    <div><img class="img" src="search1.png"></div>
+</div>
+<!--轮播图-->
+<div class="container">
+        <div class="wrap" style="left: -1280px;">
+                <img src="banner3.png">
+                <img src="banner1.png">
+                <img src="banner2.png">
+                <img src="banner3.png">
+                <img src="banner1.png">
+        </div>
+        <div class="buttons">
+            <span class="on"></span>
+            <span></span>
+            <span></span>
+        </div>
+        <a class="arrow arrow_left"><</a>
+        <a  class="arrow arrow_right">></a>
+    </div>
+    <!--分类-->
+    <div class="divid">
+        <p>分类：</p>
+        <ul>
+            <li style="color:#edb272">类1</li>
+            <li>类2</li>
+            <li>类3</li>
+            <li>类4</li>
+        </ul>
+    </div>
+    <div class="line"></div>
+    <!--书-->
+    <div class="bookcontainer">
+        <ul>
+            <li>
+                <p><a href="详情页.html" target="_self"><img src="推书_书.png"></a></p>
+                <p><img src="黑.png"></p>
+                <p>书名</p>
+                <p>作者</p>
+                <p class="underline"></p>
+            </li>
+            <li>
+                <p><img src="推书_书.png"></p>
+                <p><img src="黑.png"></p>
+                <p>书名</p>
+                <p>作者</p>
+                <p class="underline"></p>
+            </li>
+            <li>
+                    <p><img src="推书_书.png"></p>
+                    <p><img src="黑.png"></p>
+                    <p>书名</p>
+                    <p>作者</p>
+                    <p class="underline"></p>
+            </li>
+            <li>
+                    <p><img src="推书_书.png"></p>
+                    <p><img src="黑.png"></p>
+                    <p>书名</p>
+                    <p>作者</p>
+                    <p class="underline"></p>
+            </li>
+            <li>
+                    <p><img src="推书_书.png"></p>
+                    <p><img src="黑.png"></p>
+                    <p>书名</p>
+                    <p>作者</p>
+                    <p class="underline"></p>
+            </li>
+            <li>
+                <p><img src="推书_书.png"></p>
+                <p><img src="黑.png"></p>
+                <p>书名</p>
+                <p>作者</p>
+                <p class="underline"></p>
+            <li>
+                <p><img src="推书_书.png"></p>
+                <p><img src="黑.png"></p>
+                <p>书名</p>
+                <p>作者</p>
+                <p class="underline"></p>
+            </li>
+            <li>
+                <p><img src="推书_书.png"></p>
+                <p><img src="黑.png"></p>
+                <p>书名</p>
+                <p>作者</p>
+                <p class="underline"></p>
+            </li>
+        </ul>
+    </div>
+<script>
+    /*搜索*/
+document.getElementById("search").onfocus=function(){
+    if (search.placeholder=="请搜索") {
+        search.placeholder="";
+    }}
+    /*轮播图*/ 
+        var wrap = document.querySelector(".wrap");
+        var next = document.querySelector(".arrow_right");
+        var prev = document.querySelector(".arrow_left");
+        next.onclick = function () {
+            next_pic();
+        }
+        prev.onclick = function () {
+            prev_pic();
+        }
+        function next_pic () {
+            index++;
+            if(index > 2){
+                index = 0;
+            }
+            showCurrentDot();
+            var newLeft;
+            if(wrap.style.left === "-5120px"){
+                newLeft = -2560;
+            }else{
+                newLeft = parseInt(wrap.style.left)-1280;
+            }
+            wrap.style.left = newLeft + "px";
+        }
+        function prev_pic () {
+            index--;
+            if(index < 0){
+                index = 2;
+            }
+            showCurrentDot();
+            var newLeft;
+            if(wrap.style.left === "0px"){
+                newLeft = -2560;
+            }else{
+                newLeft = parseInt(wrap.style.left)+1280;
+            }
+            wrap.style.left = newLeft + "px";
+        }
+        var timer = null;
+        function autoPlay () {
+            timer = setInterval(function () {
+                next_pic();
+            },2500);
+        }
+        autoPlay();
+
+        var container = document.querySelector(".container");
+        container.onmouseenter = function () {
+            clearInterval(timer);
+        }
+        container.onmouseleave = function () {
+            autoPlay();    
+        }
+
+        var index = 0;
+        var dots = document.getElementsByTagName("span");
+        function showCurrentDot () {
+            for(var i = 0, len = dots.length; i < len; i++){
+                dots[i].className = "";
+            }
+            dots[index].className = "on";
+        }
+
+        for (var i = 0, len = dots.length; i < len; i++){
+            (function(i){
+                dots[i].onclick = function () {
+                    var dis = index - i;
+                    if(index == 2&& parseInt(wrap.style.left)!==-3840){
+                        dis = dis - 3;     
+                    }
+                    if(index == 0 && parseInt(wrap.style.left)!== -1280){
+                        dis = 3 + dis;
+                    }
+                    wrap.style.left = (parseInt(wrap.style.left) +  dis * 1280)+"px";
+                    index = i;
+                    showCurrentDot();
+                }
+            })(i);            
+        }
+</script>
+</body>
+</html>

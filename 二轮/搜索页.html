@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>搜索页</title>
+    <link href="搜索页.css" type="text/css" rel="stylesheet" >
+
+</head>
+<body>
+    <div class="head">
+    <div ><img src="推书_0002s_0000s_0001_small-logo.png.png"></div>
+    <form method="POST" action="save.php">
+        <input type="text" name="search" placeholder="请搜索" id="search";>
+    
+</form>
+    <div class="img"><img src="search1.png"></div> 
+        <div class="select">
+            <div id="divid"  onclick="options()" >分类</div>
+           <ul id="option">
+               <a href="分类页.html" target="_self"><li>分类1</li></a>
+               <a href="#"><li>分类1</li></a>
+               <a href="#"><li>分类1</li></a>
+               <a href="#"><li>分类1</li></a>
+           </ul>
+        </div> 
+    </div>
+  
+<div class="searchbox">
+    <form method="POST" action="save.php">
+        <input type="text"placeholder="武侠、经典、传记">
+    </form>
+    <p></p>
+</div>
+<div class="box">
+<div class="bookcontainer">
+    <ul>
+        <li>
+            <p><a href="详情页.html" target="_self"><img src="推书_书.png"></a></p>
+            <p><img src="黑.png"></p>
+            <p>书名</p>
+            <p>作者</p>
+            <p class="underline"></p>
+        </li>
+        <li>
+            <p><img src="推书_书.png"></p>
+            <p><img src="黑.png"></p>
+            <p>书名</p>
+            <p>作者</p>
+            <p class="underline"></p>
+        </li>
+        <li>
+                <p><img src="推书_书.png"></p>
+                <p><img src="黑.png"></p>
+                <p>书名</p>
+                <p>作者</p>
+                <p class="underline"></p>
+        </li>
+        <li>
+                <p><img src="推书_书.png"></p>
+                <p><img src="黑.png"></p>
+                <p>书名</p>
+                <p>作者</p>
+                <p class="underline"></p>
+        </li>
+        <li>
+                <p><img src="推书_书.png"></p>
+                <p><img src="黑.png"></p>
+                <p>书名</p>
+                <p>作者</p>
+                <p class="underline"></p>
+        </li>
+        <li>
+            <p><img src="推书_书.png"></p>
+            <p><img src="黑.png"></p>
+            <p>书名</p>
+            <p>作者</p>
+            <p class="underline"></p>
+        <li>
+            <p><img src="推书_书.png"></p>
+            <p><img src="黑.png"></p>
+            <p>书名</p>
+            <p>作者</p>
+            <p class="underline"></p>
+        </li>
+        <li>
+            <p><img src="推书_书.png"></p>
+            <p><img src="黑.png"></p>
+            <p>书名</p>
+            <p>作者</p>
+            <p class="underline"></p>
+        </li>
+    </ul>
+</div>
+</div>
+<script>
+    /*聚焦*/
+document.getElementById("search").onfocus=function(){
+			if (this.placeholder=="请搜索") {
+				this.placeholder="";
+			}}
+            /*下拉框*/
+function options(){
+    var a=document.getElementById("option");
+    if(a.style.display=="none"){
+        a.style.display="block";
+    }
+    else {a.style.display="none";}
+}
+
+
+</script>
+</body>
+</html>

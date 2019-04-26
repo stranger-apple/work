@@ -1,0 +1,54 @@
+*{padding:0px;
+    margin:0px;}
+    .head{position:absolute;height:44px;width: 100%;margin-top:10px;}
+    .logo{position:absolute;position: absolute;left: 162px;}
+    .head input{position: absolute;left:896px;height:27px;width:261px;border-radius: 13.5px;
+    outline: none;}
+    .head input::placeholder{text-indent: 7px;font:small;}
+    .img{position:absolute;z-index: 2;left:1130px;top:7px;}
+    a{text-decoration: none;}
+    .container { position: relative; width: 1280px; height: 192px; overflow: hidden;top:54px;}
+    .container .wrap {position: absolute;width: 6400px;height: 192px; z-index: 1;}
+    .container .wrap img { float: left;width: 1280px;height: 192px;}
+    .container .buttons { position: absolute;left:584px; width: 150px;height: 10px;z-index: 2;top:163px;}
+    .container .buttons span {margin-left: 5px;display: inline-block;width: 20px;height: 20px;
+    border-radius: 50%;background-color:#4d4947 ;text-align: center;cursor: pointer;}
+    .container .buttons span.on{background-color:white;box-shadow:#4d4947 2px 2px 2px; }
+    .container .arrow {position: absolute;top: 70px; color: #4d4947;padding:0px 14px; font-size: 50px;z-index: 2;display: none;}
+    .container .arrow_left {left: 10px;}
+    .container .arrow_right { right: 10px;}
+    .container:hover .arrow { display: block;}
+    /*书本详情*/
+    .ground{animation: open 0.5s ease;position:absolute;top:244px;height: 1075px;width:1280px;background: #d6d2d2;}
+    .whiteground{position: absolute;background: white; height:900px;width:907px;top:87.5;left:186.5px;
+        animation: open 0.5s ease; }
+     @keyframes open{
+         from{width:0px;height:0px}
+         to{width:907px;height:900px;}
+     }
+    .close{position:absolute;right:0px;}
+    .line1{position:absolute;top:101px;left:64px;border:#d4a9a9 solid 0.5px;width:93px;}
+    .line2{position: absolute;top:101px;left:64px;border-left: #d4a9a9 solid 1px;height:93px;}
+    .bookcover{position:absolute;left:123.3px;top:160.3px;}
+    #bookname{position:absolute;top:199.5px ;left:505.1px ;font-family: "Microsoft YaHei";font-size: x-large;}
+    #author,#library,#publish,#publishtime,#where{position:absolute;font:"Microsoft YaHei";font-size: 19px;}
+    .author{position: absolute;top:252.5px;left: 468.5px;}
+    #author{top:252.5px;left:500px;}
+    .publish{position: absolute;top:281.5px;left:466.5px;}
+    #publish{top:281.5px;left:500px;}
+    .publishtime{position: absolute;top:324.5px;left:468.5px;}
+    #publishtime{left:500px;top:324.5px;}
+    .library{position:absolute;top:353.3px;left:468.5px;}
+#library{left:630px;top:353.5px;}
+#where{left:630px;top:382.5px;}
+.book{position:absolute;left:468.5px;top:453.5px;}
+.ban{position:absolute;left:521.3px;top:450.5px;}
+.zhihu{position:absolute;left:574.1px;top:450.5px;}
+.shop{position: absolute;left:468.5px;top:497.5px}
+.jingdong{position:absolute;left:521.3px;top:492.5px;}
+.dangdang{position:absolute;left:574.1px;top:496.5px;}
+.amazon{position: absolute;left:626.9px;top:496.5px;}
+.authorbreif{position: absolute;left:123.3px;top:557.3px;width:660.4px;}
+.bookbreif{position: absolute;left:123.3px;top:676.3px;width:660.4px;}
+.line3{position:absolute;height:93px;width:1px;background-color: #d4a9a9;top:698px;right:64px;}
+.line4{position: absolute;top:791px;width:93px;right:64px;background-color: #d4a9a9;height: 1px;}

@@ -1,0 +1,31 @@
+*{padding:0px;
+margin:0px;}
+.head{position:absolute;height:44px;width: 100%;margin-top:10px;}
+.logo{position:absolute;position: absolute;left: 162px;}
+.head input{position: absolute;left:896px;height:27px;width:261px;border-radius: 13.5px;
+outline: none;}
+.head input::placeholder{text-indent: 7px;font:small;}
+.img{position:absolute;z-index: 2;left:1130px;top:7px;}
+a{text-decoration: none;}
+.container { position: relative; width: 1280px; height: 192px; overflow: hidden;top:54px;}
+.container .wrap {position: absolute;width: 6400px;height: 192px; z-index: 1;}
+.container .wrap img { float: left;width: 1280px;height: 192px;}
+.container .buttons { position: absolute;left:584px; width: 150px;height: 10px;z-index: 2;top:163px;}
+.container .buttons span {margin-left: 5px;display: inline-block;width: 20px;height: 20px;
+border-radius: 50%;background-color:#4d4947 ;text-align: center;cursor: pointer;}
+.container .buttons span.on{background-color:white;box-shadow:#4d4947 2px 2px 2px; }
+.container .arrow {position: absolute;top: 70px; color: #4d4947;padding:0px 14px; font-size: 50px;z-index: 2;display: none;}
+.container .arrow_left {left: 10px;}
+.container .arrow_right { right: 10px;}
+.container:hover .arrow { display: block;}
+.divid{position: absolute;top:270px;left:183px;display: flex;}
+.divid ul li{list-style: none;display: inline;margin-left:5px;margin-left:24px;font-size: small;font-family:"Microsoft YaHei"}
+.line{position:absolute;top:309px;left:183px;background:#e1e1e1;height:1px;width:914px;}
+.bookcontainer{position:absolute;top:310px;width:914px;left:183px;}
+.bookcontainer ul{display:flex;flex-wrap: wrap;justify-content:space-between;}
+.bookcontainer ul li{list-style: none; text-align:center;margin-bottom: 48px;margin-top:30px;}
+.underline{width:109px;height:1px;background:#e0e0e0; margin-left:46px;margin-top:16px;}
+
+
+
+    

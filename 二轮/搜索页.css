@@ -1,0 +1,24 @@
+*{padding:0; margin:0}
+.head{display: flex;height:44px;width:100%;justify-content:space-around;margin-top:10px;position:absolute;}
+.head form input{width:261px;height: 27px;border-radius: 13.5px;outline:none;}
+#search::placeholder{text-indent: 10px;font-family:"Microsoft YaHei";}
+.img{z-index:99;margin-left:-330px;margin-top:4px;}
+#divid{width:85px;height:29px;background-color: #dcd79d;border:0.5px black solid;text-align: center;}
+#option{list-style: none;height: 122px;width:86px;border-radius: 8px;
+    background-color:#dcd79d;text-align: center;display: none;animation: divide 1.5s ease;overflow:hidden}
+.select ul li{text-decoration:underline;}
+@keyframes divide{
+from{height:0px}
+to{height:122px}
+}
+.box{position: absolute;top:246px;background-color: #f4f4f4;height:1354px;width: 100%;}
+.searchbox{height:192px;width: 100%;position: absolute;background-image: url(bannersearch.png);
+background-size: 100% 192px;position: absolute;text-align:center;margin-top:53px;}
+.searchbox input{width:156px;height:40px;margin-top:93px;background-color:#e3dfb4;outline:none;border:none;}
+.searchbox input::placeholder{text-align: center;}
+.searchbox p{width:307px;height:1px;background-color: #dcdcdc;margin-left:487px;margin-top:16px;}
+.bookcontainer{position:absolute;width:914px;height:1053px;left:120px;z-index: 20;background-color:#ffffff;padding-left:63px;padding-right:63px;}
+.bookcontainer ul{display:flex;flex-wrap: wrap;justify-content:space-between;}
+.bookcontainer ul li{list-style: none; text-align:center;margin-top:84px;}
+.underline{width:109px;height:1px;background:#e0e0e0; margin-left:46px;margin-top:16px;}
+
